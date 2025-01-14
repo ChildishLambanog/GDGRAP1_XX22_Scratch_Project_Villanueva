@@ -40,7 +40,7 @@ int main(void)
 		//converting degrees to radians
 		float radian = degrees * M_PI / 180;
 
-		for (int i = 0; i < 7; i++)
+		for (int i = 0; i < 7; i++) //calculate the other vertices of the octagon
 		{
 			float x, y, result1, result2, result3, result4;
 
@@ -55,11 +55,11 @@ int main(void)
 			resultsY[i + 1] = y;
 		}
 
-		float rotate = 8.45;
-
+		float rotate = 8.45; //rotation value
+		//converting degrees to radians
 		float nRadian = rotate * M_PI / 180;
 
-		for (int i = 0; i < 8; i++)
+		for (int i = 0; i < 8; i++) //calculates the new vertices after rotation
 		{
 			float newX, newY;
 
@@ -71,9 +71,9 @@ int main(void)
 
 		}
 
-		float translate = 0.048;
+		float translate = 0.048; //translate value
 
-		for (int i = 0; i < 8; i++)
+		for (int i = 0; i < 8; i++) //calculates the new vertices after translating
 		{
 			float newY;
 
@@ -82,7 +82,7 @@ int main(void)
 			resultsY[i] = newY;
 		}
 
-		for (int i = 0; i < 8; i++)
+		for (int i = 0; i < 8; i++) //renders the octagon using the vertices calculated above
 		{
 			glVertex2f(resultsX[i], resultsY[i]);
 		}
